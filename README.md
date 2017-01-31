@@ -1,3 +1,5 @@
 # killertruths
 
-One stop to compare the top killers in USA
+Missionette Statement:
+
+What really kills Americans, stat by stat, complete with references.
