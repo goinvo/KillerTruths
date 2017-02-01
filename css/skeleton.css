@@ -46,8 +46,8 @@
 .authtext{
   display:inline-block;
   max-width:400px;
-  width: 100%;
-  text-align: right;
+  width: 70%;
+  padding-left: 10px;
 }
 
 .column,
@@ -56,6 +56,11 @@
   float: left;
   box-sizing: border-box; 
   }
+
+.icons{
+  display: flex;
+  justify-content: space-between;
+}
 
 #footnotes{
   position: relative;
@@ -66,10 +71,15 @@
   padding: none;
 }
 
-.icons{
-  position: relative;
-  padding: 40 40px;
-  max-width: 300px;
+#movers-row {
+  margin: -68px 0 0 70px;
+}
+#movers-row div {
+  width: 33.3%;
+  float: left;
+}
+#movers-row div img {
+  float: right;
 }
 
 /* For devices larger than 400px */
@@ -161,6 +171,9 @@ body {
   font-family: 'Raleway', sans-serif;
   color: #FFFFFF; 
 }
+img {
+  align-items: "margin-top";
+}
 
 
 /* Typography
@@ -169,18 +182,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 200; }
-h1 { font-family: 'Raleway', sans-serif; font-size: 1.5rem; line-height: 1.5;  letter-spacing: 0.05rem; color: #656565;}
+h1 { font-family: 'Raleway', sans-serif; font-size: 1.4rem; line-height: 1.5;  letter-spacing: 0.05rem; color: #656565;}
 h2 { font-family: 'Raleway', sans-serif; font-size: 2.0rem; line-height: 2.2;  letter-spacing: 0.1rem; color: #656565;}
-h3 { font-family: 'Ropa Sans', sans-serif; font-size: 4rem; line-height: 1.5;  letter-spacing: -.05rem; color: #656565;}
+h3 { font-family: 'Ropa Sans', sans-serif; font-size: 3.5rem; line-height: 0.4;  letter-spacing: -.05rem; color: #656565;}
 h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
 h5 { font-family: 'Ropa Sans', sans-serif; font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
 h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 /* Larger than phablet */
 @media (min-width: 550px) {
-  h1 { font-size: 1.5rem; }
+  h1 { font-size: 1.4rem; }
   h2 { font-size: 2.0rem; }
-  h3 { font-size: 4.0rem; }
+  h3 { font-size: 3.5rem; }
   h4 { font-size: 3.0rem; }
   h5 { font-size: 2.4rem; }
   h6 { font-size: 1.5rem; }
