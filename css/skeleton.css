@@ -85,6 +85,11 @@
   text-align: center;
 }
 
+#footnotes ol li {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
