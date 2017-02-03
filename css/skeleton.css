@@ -43,6 +43,10 @@
   padding: none;
   }
 
+.centcont.padded {
+  width: 90%;
+}
+
 .authtext{
   display:inline-block;
   max-width:400px;
