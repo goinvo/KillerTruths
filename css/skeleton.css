@@ -71,15 +71,18 @@
   padding: none;
 }
 
-#movers-row {
-  margin: -68px 0 0 70px;
+.movers-row {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   padding-top: 5px;
 }
-#movers-row div {
-  width: 33.3%;
-  float: left;
-}
-#movers-row div img {
-  float: right;
+
+.movers-row div {
+  width: 25%;
+  /*height: 100px;*/
+  text-align: center;
 }
 
 /* For devices larger than 400px */
