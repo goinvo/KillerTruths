@@ -2,6 +2,8 @@
 
 By Sharon Lee w/Jennifer Patel, Juhan Sonin
 
+Email feedback to info@goinvo.com
+
 Copyright Involution Studios 2017
 
 Licensed under Apache 2.
