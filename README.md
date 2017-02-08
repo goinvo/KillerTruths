@@ -1,14 +1,19 @@
 # Killer Truths
-By Sharon Lee w/Jennifer Patel, Juhan Sonin
-Copyright Involution Studios 2017
-Licensed under Creative Commons Attribution License v3
 
-Missionette Statement:
+By Sharon Lee w/Jennifer Patel, Juhan Sonin
+
+Copyright Involution Studios 2017
+
+Licensed under Apache 2.
+
+
+
+## Missionette Statement:
 
 What really kills Americans, stat by stat, complete with references.
 
 
-References:
+## References:
 
 1. Accidents or Unintentional Injuries. (2016, September 15). Retrieved January 23, 2017, from https://www.cdc.gov/nchs/fastats/accidental-injury.htm
     
