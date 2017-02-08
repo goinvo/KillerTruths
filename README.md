@@ -1,4 +1,7 @@
-# killertruths
+# Killer Truths
+By Sharon Lee w/Jennifer Patel, Juhan Sonin
+Copyright Involution Studios 2017
+Licensed under Creative Commons Attribution License v3
 
 Missionette Statement:
 
