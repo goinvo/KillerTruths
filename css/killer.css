@@ -1,0 +1,115 @@
+body {
+    color: #353535;
+    background-color:#373737;
+}
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.section {
+    padding: 20px 0;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header {
+    color: #FFFFFF;
+    background-color:#373737;
+}
+.hero {
+    height: 165px;
+    width: auto;
+}
+.hero h1 {
+    color: #fff;
+}
+
+/* Chart
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.chart-wrapper {
+    color: #E5E5E5;
+    background-color:#373737;
+}
+#killer-chart {
+    border: solid #000 1px;
+}
+#killer-chart .label {
+    z-index: 1;
+    margin-left: 1rem;
+}
+#killer-chart .label .value,
+#killer-chart .label .name {
+    display: inline-block;
+}
+#killer-chart .label .value {
+    margin-right: 1rem;
+    width: 8rem;
+    text-align: right;
+    color: #E65B47;
+}
+#killer-chart .label .name {
+    color: #FBBD9F;
+}
+#killer-chart .label .value.active {
+    color: #E65B47;
+}
+#killer-chart .label .name.active {
+    color: #FBBD9F;
+}
+#killer-chart .bar {
+    z-index: 0;
+    margin-top: -35px;
+    width: 100%;
+    height: 45px;
+    fill: #000;
+}
+
+/* Downloads
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.download-wrapper {
+    background-color: #000;
+}
+.download-wrapper a {
+    color: #E65B47;
+}
+.download-wrapper ul {
+    list-style: none;
+    display: flex;
+}
+.download-wrapper ul li {
+    flex: 1;
+}
+
+/* Authors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.authors-wrapper {
+    background: #d7d7d7;
+    color: #656565;
+}
+.author .auth-img,
+.author .authtext {
+    display: inline-block;
+    vertical-align: top;
+}
+.author .auth-img {
+    width: 25%;
+    margin-right: 20px;
+}
+.author .authtext {
+    width: 60%;
+    margin-top: -5px;
+}
+.author .authtext p.studio{
+    margin-bottom: 1.5rem;
+}
+
+/* Sources
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.sources-wrapper {
+    background: #FFF;
+    color: #656565;
+}
+ol li {
+    line-height: 2.2rem;
+    color: #E65B47;
+}

@@ -31,80 +31,27 @@
 .container {
   position: relative;
   width: 100%;
-  margin: auto;
-  padding: none;
-  }
-
-.centcont{
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  margin: auto;
-  padding: none;
-  }
-
-.centcont.padded {
-  width: 90%;
-}
-
-.authtext{
-  display:inline-block;
-  max-width:400px;
-  width: 70%;
-  padding-left: 10px;
-}
-
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
 .column,
 .columns {
   width: 100%;
   float: left;
-  box-sizing: border-box; 
-  }
-
-.icons{
-  display: flex;
-  justify-content: space-between;
-}
-
-#footnotes{
-  position: relative;
-  width: 80%;
-  margin: 0% 5%;
-  color: #E65B47;
-  background-color: #FBFBFB;
-  padding: none;
-}
-
-.movers-row {
-   display: -webkit-flex;
-   display: flex;
-   -webkit-flex-direction: row;
-   flex-direction: row;
-   padding-top: 5px;
-}
-
-.movers-row div {
-  width: 25%;
-  /*height: 100px;*/
-  text-align: center;
-}
-
-#footnotes ol li {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
+  box-sizing: border-box; }
 
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
-    width: 100%;
+    width: 85%;
     padding: 0; }
 }
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
   .container {
-    width: 100%; }
+    width: 80%; }
   .column,
   .columns {
     margin-left: 4%; }
@@ -115,7 +62,7 @@
   .one.column,
   .one.columns                    { width: 4.66666666667%; }
   .two.columns                    { width: 13.3333333333%; }
-  .three.columns                  { width: 22%; position: relative; padding: 10 10px; max-width: 400px;  }
+  .three.columns                  { width: 22%;            }
   .four.columns                   { width: 30.6666666667%; }
   .five.columns                   { width: 39.3333333333%; }
   .six.columns                    { width: 48%;            }
@@ -166,26 +113,19 @@
 }
 
 
-
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* NOTE
 html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
-
 html {
   font-size: 62.5%; }
 body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  line-height: 2.2;
-  font-family: 'Raleway', sans-serif;
-  color: #FFFFFF; 
-}
-img {
-  align-items: "margin-top";
-}
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222; }
 
 
 /* Typography
@@ -194,16 +134,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 200; }
-h1 { font-family: 'Raleway', sans-serif; font-size: 1.4rem; line-height: 1.5;  letter-spacing: 0.05rem; color: #656565;}
-h2 { font-family: 'Raleway', sans-serif; font-size: 2.0rem; line-height: 2.2;  letter-spacing: 0.1rem; color: #656565;}
-h3 { font-family: 'Ropa Sans', sans-serif; font-size: 3.5rem; line-height: 0.4;  letter-spacing: -.05rem; color: #656565;}
+h1 { font-family: 'Raleway', sans-serif; font-size: 2.4rem; line-height: 1.5rem;  letter-spacing: 0.05rem; color: #656565;}
+h2 { font-family: 'Raleway', sans-serif; font-size: 2.0rem; line-height: 2.2rem;  letter-spacing: 0.1rem; color: #656565;}
+h3 { font-family: 'Ropa Sans', sans-serif; font-size: 3.5rem; line-height: 3rem;  letter-spacing: -.05rem; color: #656565;}
 h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
-h5 { font-family: 'Ropa Sans', sans-serif; font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h5 { font-family: 'Ropa Sans', sans-serif; font-size: 1.8rem; line-height: 1.5rem;  letter-spacing: -.05rem; }
 h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 /* Larger than phablet */
 @media (min-width: 550px) {
-  h1 { font-size: 1.4rem; }
+  h1 { font-size: 2.4rem; }
   h2 { font-size: 2.0rem; }
   h3 { font-size: 3.5rem; }
   h4 { font-size: 3.0rem; }
@@ -218,9 +158,11 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #E65B47;
+  text-decoration: none;
+}
 a:hover {
-  color: #0FA0CE; }
+  color: #DE2005; }
 
 
 /* Buttons
@@ -438,7 +380,10 @@ hr {
   margin-bottom: 3.5rem;
   border-width: 0;
   border-top: 1px solid #E1E1E1; }
-
+img.scale-with-grid {
+  max-width: 100%;
+  height: auto;
+}
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
