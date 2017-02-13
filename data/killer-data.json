@@ -1,72 +1,72 @@
 {
 	"items": [{
-			"name":  "Heart Disease",
-			"value": "4850000",
-			"description": ""
+			"name":"Heart Disease",
+			"value":"4850000",
+			"description":""
 		}, {
-			"name":  "Cancer",
-			"value": "4610000",
-			"description": ""
+			"name":"Cancer",
+			"value":"4610000",
+			"description":""
 		}, {
-			"name":  "Smoking Related",
-			"value": "3840000",
-			"description": ""
+			"name":"Smoking Related",
+			"value":"3840000",
+			"description":""
 		}, {
-			"name":  "Medical Error",
-			"value": "2010000",
-			"description": ""
+			"name":"Medical Error",
+			"value":"2010000",
+			"description":""
 		}, {
-			"name":  "Chronic Lower Resp Disease",
-			"value": "1130000",
-			"description": ""
+			"name":"Chronic Lower Resp Disease",
+			"value":"1130000",
+			"description":""
 		}, {
-			"name":  "Stroke",
-			"value": "1050000",
-			"description": ""
+			"name":"Stroke",
+			"value":"1050000",
+			"description":""
 		}, {
-			"name":  "Accidents",
-			"value": "1000000",
-			"description": ""
+			"name":"Accidents",
+			"value":"1000000",
+			"description":""
 		}, {
-			"name":  "Alzheimer's Disease",
-			"value": "670000",
-			"description": ""
+			"name":"Alzheimer's Disease",
+			"value":"670000",
+			"description":""
 		}, {
-			"name":  "Diabetes",
-			"value": "580000",
-			"description": ""
+			"name":"Diabetes",
+			"value":"580000",
+			"description":""
 		}, {
-			"name":  "Influenza, Pneumonia",
-			"value": "430000",
-			"description": ""
+			"name":"Influenza, Pneumonia",
+			"value":"430000",
+			"description":""
 		}, {
-			"name":  "Kidney Disease",
-			"value": "380000",
-			"description": ""
+			"name":"Kidney Disease",
+			"value":"380000",
+			"description":""
 		}, {
-			"name":  "Drug Overdose",
-			"value": "320000",
-			"description": ""
+			"name":"Drug Overdose",
+			"value":"320000",
+			"description":""
 		}, {
-			"name":  "Suicide",
-			"value": "310000",
-			"description": ""
+			"name":"Suicide",
+			"value":"310000",
+			"description":""
 		}, {
-			"name":  "Firearm Related",
-			"value": "25000",
-			"description": ""
+			"name":"Firearm Related",
+			"value":"25000",
+			"description":""
 		},  {
-			"name":  "Homicide",
-			"value": "110000",
-			"description": ""
+			"name":"Homicide",
+			"value":"110000",
+			"description":""
 		}, {
-			"name":  "Drunk Driving",
-			"value": "90000",
-			"description": ""
+			"name":"Drunk Driving",
+			"value":"90000",
+			"description":""
 		}, {
-			"name":  "Terrorism",
-			"value": "52",
-			"description": ""
+			"name":"Terrorism",
+			"value":"52",
+			"description":""
 		}
 	]
 }
