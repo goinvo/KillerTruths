@@ -33,6 +33,11 @@ h1, h2, h3, h4 {
 #killer-chart {
     border: solid #000 1px;
 }
+#killer-chart .killer {
+    border: solid 1px red;
+    height: 100px;
+    width: 100px;
+}
 #killer-chart .label {
     z-index: 1;
     margin-left: 1rem;
@@ -41,15 +46,7 @@ h1, h2, h3, h4 {
 #killer-chart .label .name {
     display: inline-block;
 }
-#killer-chart .label .value {
-    margin-right: 1rem;
-    width: 8rem;
-    text-align: right;
-    color: #E65B47;
-}
-#killer-chart .label .name {
-    color: #FBBD9F;
-}
+
 #killer-chart .label .value.active {
     color: #E65B47;
 }
@@ -57,11 +54,14 @@ h1, h2, h3, h4 {
     color: #FBBD9F;
 }
 #killer-chart .bar {
-    z-index: 0;
-    margin-top: -35px;
-    width: 100%;
-    height: 45px;
     fill: #000;
+}
+#killer-chart .name {
+    fill: #FBBD9F;
+}
+#killer-chart .value {
+    text-anchor: end;
+    fill: #E65B47;
 }
 
 /* Downloads

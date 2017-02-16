@@ -1,5 +1,4 @@
-{
-	"items": [{
+ [{
 			"name":"Heart Disease",
 			"value":"4850000",
 			"description":""
@@ -69,4 +68,3 @@
 			"description":""
 		}
 	]
-}
