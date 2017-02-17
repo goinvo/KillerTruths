@@ -58,11 +58,40 @@ h1, h2, h3, h4 {
 }
 #killer-chart .name {
     fill: #FBBD9F;
+    text-transform: uppercase;
+    font-family: 'Ropa Sans', sans-serif;
 }
 #killer-chart .value {
     text-anchor: end;
     fill: #E65B47;
+    font-family: 'Ropa Sans', sans-serif;
 }
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+    #killer-chart .bar {
+        fill: #fff;
+        height: 10px;
+    }
+    #killer-chart .name {
+        text-anchor: end;
+    }
+    #killer-chart .value {
+        text-anchor: start;
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
 
 /* Downloads
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
