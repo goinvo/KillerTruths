@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://bl.ocks.org/josiahdavis/raw/7d84b2f1837eab9c24d9/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+
+.bar {
+  fill: #1f77b4;
+}
+
+.bar:hover {
+  fill: #ff7f0e;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#chart {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.d3-tip {
+  line-height: 1;
+  font: 14px sans-serif;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: rgb(185, 185, 185);
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+</style>
+
+</head><body>
+<svg id="chart"></svg>
+<script type="text/javascript" src="https://d3js.org/d3.v3.js"></script>
+
+<script>
+
+var margin = {top: 20, right: 20, bottom: 50, left: 100},
+    width = parseInt(d3.select("#chart").style("width")) - margin.left - margin.right,
+    height = parseInt(d3.select("#chart").style("height")) - margin.top - margin.bottom;
+
+var yScale = d3.scale.ordinal()
+    .rangeRoundBands([height, 0], 0.1);
+
+var xScale = d3.scale.linear()
+    .range([0, width]);
+
+var yAxis = d3.svg.axis()
+    .scale(yScale)
+    .orient("left");
+
+var xAxis = d3.svg.axis()
+    .scale(xScale)
+    .orient("bottom")
+    .tickFormat(function(d) { return "$" + dollarFormatter(d);});
+
+var svg = d3.select("#chart")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.csv("top.csv", format, function(error, data){
+  if (error) throw error;
+
+  // Filter to select a subset
+  var subset = data.filter(function(el){
+    return  (el["metric"] === "Sales")
+            && (el["Sub-Category"] === "Bookcases")
+            && (el["Type"] === "Customer");
+  });
+
+  // Sort the data so bar chart is sorted in decreasing order
+  subset = subset.sort(function(a, b) { return a["total"] - b["total"]; });
+  console.log(JSON.stringify(subset, null, 2));
+
+  yScale.domain(subset.map(function(d) { return d["Name"]; }));
+  xScale.domain([0, d3.max(subset, function(d) { return d["total"]; })])
+
+  svg.selectAll(".bar")
+      .data(subset)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("width", function(d) { return xScale(d["total"]); })
+      .attr("y", function(d) { return yScale(d["Name"]); })
+      .attr("height", yScale.rangeBand()) ;
+
+});
+
+// Define responsive behavior
+function resize() {
+  var width = parseInt(d3.select("#chart").style("width")) - margin.left - margin.right;
+
+  // Update the range of the scale with new width/height
+  xScale.range([0, width]);
+
+
+  // Force D3 to recalculate and update the line
+  svg.selectAll(".bar")
+    .attr("width", function(d) { return xScale(d["total"]); });
+};
+
+// Call the resize function whenever a resize event occurs
+d3.select(window).on('resize', resize);
+
+// Call the resize function
+resize();
+
+// Define the format function
+function format(d) {
+  d.total = +d.total;
+  return d;
+}
+
+</script>
+
+</body></html>

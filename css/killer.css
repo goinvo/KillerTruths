@@ -29,6 +29,7 @@ h1, h2, h3, h4 {
 .chart-wrapper {
     color: #E5E5E5;
     background-color:#373737;
+    margin-left: 20px;
 }
 #killer-chart {
     border: solid #000 1px;
