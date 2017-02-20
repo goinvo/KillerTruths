@@ -120,6 +120,8 @@ d3.json('data/killer-data.json', function(error, data) {
             width = parseInt(d3.select('#killer-chart').style('width')) - margin.left - margin.right;
         x.range([0, width]);
 
+        chart.attr('width', width + margin.left + margin.right);
+
         bar.selectAll('rect')
             .attr('width', function(d) { return x(d.value); });
     };
@@ -128,6 +130,8 @@ d3.json('data/killer-data.json', function(error, data) {
         var margin = {top: 0, right: 0, bottom: 0, left: 0},
             width = parseInt(d3.select('#killer-chart').style('width')) - margin.left - margin.right;
         x.range([0, width]);
+
+        chart.attr('width', width);
 
         bar.selectAll('rect')
             .attr('width', function(d) { return x(d.value); });

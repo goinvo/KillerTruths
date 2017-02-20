@@ -24,6 +24,16 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
+@media (min-width: 550px) {
+    .header {
+        margin-left: 50px;
+    }
+    .hero img {
+        height: 150px;
+        width: auto;
+    }
+}
+
 /* Chart
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .chart-wrapper {
@@ -32,7 +42,10 @@ h1, h2, h3, h4 {
 }
 .chart-wrapper p {
     max-width: 500px;
-    margin-left: 32;
+    margin-left: 32px;
+}
+#killer-chart {
+    width:100%;
 }
 #killer-chart .killer {
     border: solid 1px red;
@@ -75,32 +88,12 @@ h1, h2, h3, h4 {
     text-anchor: start;
 }
 
-
-/* Larger than mobile */
-@media (min-width: 400px) {}
-
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-    .header {
-        margin-left: 50px;
-    }
-    .hero img {
-        height: 150px;
-        width: auto;
-    }
-    .chart-wrapper p{
+    .chart-wrapper p {
         margin: 0 50px 20px 50px;
     }
 }
-
-/* Larger than tablet */
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
 
 /* Downloads
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -121,14 +114,24 @@ h1, h2, h3, h4 {
 }
 .dl-img {
     display: block;
-    height: 50px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 .dl-img svg{
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     align-self: center;
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+    .dl-img {
+        margin-bottom: 10px;
+    }
+    .dl-img svg{
+        height: 50px;
+        width: 50px;
+    }
 }
 
 /* Authors
@@ -153,6 +156,10 @@ h1, h2, h3, h4 {
 .author .authtext p.studio{
     margin-bottom: 1.5rem;
 }
+.authors,
+.contributors {
+    margin: 30px 0 50px 0;
+}
 
 /* Sources
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -160,7 +167,36 @@ h1, h2, h3, h4 {
     background: #FFF;
     color: #656565;
 }
-ol li {
-    line-height: 2.2rem;
-    color: #E65B47;
+.footnotes ol {
+    margin: 0;
+    padding: 0;
+    counter-reset: item;
+    list-style-position: outside;
 }
+.footnotes ol li {
+    line-height: 2.2rem;
+    position: relative;
+    left: 0;
+    display: block;
+    list-style-position: outside;
+    color: #353535;
+}
+.footnotes li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+    position: absolute;
+    left: -1.5em;
+    text-align: right;
+    width: 1em;
+    color: #989898;
+}
+
+.footnotes ol li a {
+    color: #E65B47;
+    word-wrap: break-word;
+}
+
+.footnotes li {
+    
+}
+
