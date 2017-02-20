@@ -8,6 +8,7 @@ h1, h2, h3, h4 {
 }
 .section {
     padding: 20px 0;
+    display: block;
 }
 
 /* Header
@@ -16,12 +17,11 @@ h1, h2, h3, h4 {
     color: #FFFFFF;
     background-color:#373737;
 }
-.hero {
-    height: 165px;
-    width: auto;
-}
 .hero h1 {
     color: #fff;
+}
+.hero img {
+    width: 100%;
 }
 
 /* Chart
@@ -29,6 +29,10 @@ h1, h2, h3, h4 {
 .chart-wrapper {
     color: #E5E5E5;
     background-color:#373737;
+}
+.chart-wrapper p {
+    max-width: 500px;
+    margin-left: 32;
 }
 #killer-chart .killer {
     border: solid 1px red;
@@ -42,13 +46,6 @@ h1, h2, h3, h4 {
 #killer-chart .label .value,
 #killer-chart .label .name {
     display: inline-block;
-}
-
-#killer-chart .label .value.active {
-    color: #E65B47;
-}
-#killer-chart .label .name.active {
-    color: #FBBD9F;
 }
 #killer-chart .bar {
     fill: #fff;
@@ -69,7 +66,7 @@ h1, h2, h3, h4 {
     fill: #000;
     height: 40px;
 }
-#killer-chart .mobile .value {
+#killer-chart .value {
     fill: #E65B47;
     text-anchor: end;
 }
@@ -84,7 +81,16 @@ h1, h2, h3, h4 {
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-
+    .header {
+        margin-left: 50px;
+    }
+    .hero img {
+        height: 150px;
+        width: auto;
+    }
+    .chart-wrapper p{
+        margin: 0 50px 20px 50px;
+    }
 }
 
 /* Larger than tablet */
@@ -107,9 +113,22 @@ h1, h2, h3, h4 {
 .download-wrapper ul {
     list-style: none;
     display: flex;
+    margin-bottom: 0;
 }
 .download-wrapper ul li {
     flex: 1;
+    text-align: center;
+}
+.dl-img {
+    display: block;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.dl-img svg{
+    height: 50px;
+    width: 50px;
+    align-self: center;
 }
 
 /* Authors

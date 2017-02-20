@@ -1,8 +1,3 @@
-var margin = {top: 20, right: 20, bottom: 50, left: 300},
-    width = parseInt(d3.select('#killer-chart').style('width')) - margin.left - margin.right;
-var barHeight = 40;
-var mobileThreshold = 550;
-
 d3.json('data/killer-data.json', function(error, data) {
     if (error) throw error;
 
@@ -13,7 +8,9 @@ d3.json('data/killer-data.json', function(error, data) {
     });
     console.log(data[0].name);
 
+    var barHeight = 40;
     var height = barHeight * data.length;
+    var mobileThreshold = 600;
 
     var formatNum = d3.format('0,000');
 
@@ -24,15 +21,10 @@ d3.json('data/killer-data.json', function(error, data) {
     console.log(max);
     console.log(min);
 
-    //var barWidth = width * 6;
-
     var x = d3.scale.linear()
-        .domain([0, max])
-        .range([0, width]);
-    //var y = d3.scale.linear().range([height, 0]);
+            .domain([0, max]);
 
     var chart = d3.select('#killer-chart').append('svg')
-        .attr('width', width + margin.left + margin.right)
         .attr('height', height);
 
     var bar = chart.selectAll('g')
@@ -44,7 +36,14 @@ d3.json('data/killer-data.json', function(error, data) {
         });
 
     function desktopSize() {
-            //styles for desktop - scale this
+        var margin = {top: 20, right: 20, bottom: 50, left: 300},
+            width = parseInt(d3.select('#killer-chart').style('width')) - margin.left - margin.right;
+        
+        x.range([0, width]);
+
+        chart.attr('width', width + margin.left + margin.right);
+
+        //styles for desktop
         bar.append('rect')
             .attr('class', 'bar')
             .attr('x', 290)
@@ -56,7 +55,7 @@ d3.json('data/killer-data.json', function(error, data) {
 
         bar.append('text')
             .attr('class', 'value')
-            .attr('x', 215)
+            .attr('x', 275)
             .attr('y', barHeight / 2)
             .attr('dy', '.35em')
             .text(function(d){
@@ -81,13 +80,12 @@ d3.json('data/killer-data.json', function(error, data) {
         var margin = {top: 0, right: 0, bottom: 0, left: 0}
             width = parseInt(d3.select('#killer-chart').style('width')) - margin.left - margin.right;
 
-        var x = d3.scale.linear()
-            .domain([0, max])
-            .range([0, width]);
+        x.range([0, width]);
 
         /*apply class for mobile sizes, so there 
             are no awkward transitions when resizing*/
-        chart.attr('class', 'mobile');
+        chart.attr('class', 'mobile')
+            .attr('width', width + margin.left + margin.right);
 
         //redraw chart for mobile
         bar.append('rect')
@@ -103,7 +101,7 @@ d3.json('data/killer-data.json', function(error, data) {
             .attr('y', barHeight / 2)
             .attr('dy', '.35em')
             .text(function(d){
-                return d.value;
+                return formatNum(d.value);
             });
 
         bar.append('text')
@@ -118,17 +116,29 @@ d3.json('data/killer-data.json', function(error, data) {
 
         // Define responsive behavior
     function resize() {
-        var width = parseInt(d3.select('#killer-chart').style('width')) - margin.left - margin.right;
-      
+        var margin = {top: 20, right: 20, bottom: 50, left: 300},
+            width = parseInt(d3.select('#killer-chart').style('width')) - margin.left - margin.right;
         x.range([0, width]);
 
         bar.selectAll('rect')
             .attr('width', function(d) { return x(d.value); });
     };
 
+    function mobileResize() {
+        var margin = {top: 0, right: 0, bottom: 0, left: 0},
+            width = parseInt(d3.select('#killer-chart').style('width')) - margin.left - margin.right;
+        x.range([0, width]);
+
+        bar.selectAll('rect')
+            .attr('width', function(d) { return x(d.value); });
+    };
+
+
     // draw a desktop chart unless the window size is below 550px
     if (window.innerWidth < mobileThreshold) {
         mobileSize();
+        d3.select(window).on('resize', mobileResize);
+        mobileResize();
     } else {
         desktopSize();
         d3.select(window).on('resize', resize);
