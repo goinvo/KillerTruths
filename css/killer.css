@@ -29,10 +29,6 @@ h1, h2, h3, h4 {
 .chart-wrapper {
     color: #E5E5E5;
     background-color:#373737;
-    margin-left: 20px;
-}
-#killer-chart {
-    border: solid #000 1px;
 }
 #killer-chart .killer {
     border: solid 1px red;
@@ -55,34 +51,40 @@ h1, h2, h3, h4 {
     color: #FBBD9F;
 }
 #killer-chart .bar {
-    fill: #000;
+    fill: #fff;
+    height: 10px;
 }
 #killer-chart .name {
     fill: #FBBD9F;
     text-transform: uppercase;
     font-family: 'Ropa Sans', sans-serif;
+    text-anchor: end;
 }
 #killer-chart .value {
-    text-anchor: end;
     fill: #E65B47;
     font-family: 'Ropa Sans', sans-serif;
 }
+
+#killer-chart .mobile .bar {
+    fill: #000;
+    height: 40px;
+}
+#killer-chart .mobile .value {
+    fill: #E65B47;
+    text-anchor: end;
+}
+#killer-chart .mobile .name {
+    fill: #FBBD9F;
+    text-anchor: start;
+}
+
 
 /* Larger than mobile */
 @media (min-width: 400px) {}
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-    #killer-chart .bar {
-        fill: #fff;
-        height: 10px;
-    }
-    #killer-chart .name {
-        text-anchor: end;
-    }
-    #killer-chart .value {
-        text-anchor: start;
-    }
+
 }
 
 /* Larger than tablet */
