@@ -17,26 +17,11 @@
 		}, {
 			"name":"Stroke",
 			"value":"1050000",
-			"description":"<h4>Stroke <span> / Cerebrovascular Disease</span></h4><p>Deaths : 1,050,000</p>
-                <p>ICD-10 Codes : I60–I69</p>
-                <p>Anyone can have a stroke, but family history, conditions (such as high blood pressure, high cholesterol, heart disease, and others), and behaviours (such as tobaccor use, physical inactivity, unhealthy diet, and others) can add to your risk.</p>
-                <div class="citations">
-                    <h4>Citations</h4>
-                    <p><a href="#ref-4">4</a>, 
-                        <a href="#ref-14">14</a>, 
-                        <a href="#ref-15">15</a>, 
-                        <a href="#ref-16">16</a>, 
-                        <a href="#ref-19">19</a>, 
-                        <a href="#ref-20">20</a>, 
-                        <a href="#ref-21">21</a>, 
-                        <a href="#ref-26">26</a>, 
-                        <a href="#ref-27">27</a>,
-                    </p>
-                </div>"
+			"description":"<h4>Stroke <span> / Cerebrovascular Disease</span></h4><p>Deaths : 1,050,000</p><p>ICD-10 Codes : I60–I69</p><p>Anyone can have a stroke, but family history, conditions (such as high blood pressure, high cholesterol, heart disease, and others), and behaviours (such as tobaccor use, physical inactivity, unhealthy diet, and others) can add to your risk.</p><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-4\">4</a>, <a href=\"#ref-14\">14</a>, <a href=\"#ref-15\">15</a>, <a href=\"#ref-16\">16</a>, <a href=\"#ref-19\">19</a>, <a href=\"#ref-20\">20</a>, <a href=\"#ref-21\">21</a>, <a href=\"#ref-26\">26</a>, <a href=\"#ref-2\">27</a></p></div>"
 		}, {
 			"name":"Accidents",
 			"value":"1000000",
-			"description":""
+			"description":"<h4>Accidents <span> / Unintentional Injuries</span></h4><p>Deaths : 1,000,000</p><p>ICD-10 Codes : V01-X59, Y85-Y86</p><p>Compromised primarily of falls, motor vehicle traffic accidents and unintentional poisoning deaths.</p><img src=\"./images/accidents.png\" class=\"scale-with-grid\" /><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-1\">1</a>, <a href=\"#ref-14\">14</a>, <a href=\"#ref-15\">15</a>, <a href=\"#ref-16\">16</a>, <a href=\"#ref-19\">19</a>, <a href=\"#ref-20\">20</a>, <a href=\"#ref-21\">21</a>, <a href=\"#ref-26\">26</a>, <a href=\"#ref-27\">27</a></p></div>"
 		}, {
 			"name":"Alzheimer's Disease",
 			"value":"670000",
