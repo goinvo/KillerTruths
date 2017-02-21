@@ -40,9 +40,16 @@ h1, h2, h3, h4 {
     color: #E5E5E5;
     background-color:#373737;
 }
-.chart-wrapper p {
+.chart-wrapper .chart-description {
     max-width: 500px;
     margin-left: 32px;
+    margin-right: 20px;
+}
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+    .chart-wrapper .chart-description {
+        margin: 0 50px 20px 50px;
+    }
 }
 #killer-chart {
     width:100%;
@@ -87,12 +94,50 @@ h1, h2, h3, h4 {
     fill: #FBBD9F;
     text-anchor: start;
 }
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
-    .chart-wrapper p {
-        margin: 0 50px 20px 50px;
-    }
+.description {
+    padding: 10px;
+}
+.description h4,
+.description .citations h4 {
+    text-transform: uppercase;
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.description h4 {
+    font-size: 2rem;    
+    color: #fbbd9f;    
+    margin-bottom: 1rem;
+    letter-spacing: .1rem;
+}
+.description h4 span {
+    color: #e3716d;
+    font-size: 1.5rem;
+}
+.description p {
+    margin-bottom: 1rem;
+}
+.description p .highlight{
+    margin-bottom: 1rem;
+    color: #e3716d;
+}
+.description ol {
+    margin-left: 3rem;
+    color: #e3716d;
+}
+.description ol li {
+    margin: 0 0 0 0;
+}
+.description .citations {
+    padding-top: 10px;
+    border-top: solid 1px #979797;
+}
+.description .citations h4 {
+    font-size: 1.5rem;
+    color: #e3716d;
+    margin-bottom: 0;
+}
+.description .citations p,
+.description .citations p a {
+    color: #e3716d;
 }
 
 /* Downloads
@@ -182,21 +227,17 @@ h1, h2, h3, h4 {
     color: #353535;
 }
 .footnotes li:before {
-    content: counters(item, ".") ". ";
+    content: counters(item, ".");
     counter-increment: item;
     position: absolute;
     left: -1.5em;
     text-align: right;
     width: 1em;
     color: #989898;
+    font-size: 12px;
 }
 
 .footnotes ol li a {
     color: #E65B47;
     word-wrap: break-word;
 }
-
-.footnotes li {
-    
-}
-
