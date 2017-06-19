@@ -17,11 +17,16 @@
             <img src="./images/killer_truths_title.png" alt="Killer Truths" />
         </div>
     </header>
-    <div class="section chart-wrapper">
+    <div class="section chart-wrapper mobile-chart">
         <div class="chart-header">
-             <p class="chart-description deaths">Estimated number of deaths in USA from 2007-2014.</p>
-             <p class="chart-description costs-desc">Gov. Spending on Prevention</p>
+             <div class="chart-toggle deaths-toggle"><p class="chart-description">Estimated number of deaths in USA from 2007-2014.</p></div>
+             <div class="chart-toggle costs-toggle"><p class="chart-description costs-desc">Gov. Spending on Prevention</p></div>
         </div>
+        <div id="mobile-killer-chart">
+        </div>
+    </div>
+    <div class="section chart-wrapper desktop-chart">
+        
         <div class="chart-container deaths-chart">
             <div class="chart-header">
                 <p class="chart-description">Estimated number of deaths in USA from 2007-2014.</p>

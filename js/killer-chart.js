@@ -11,7 +11,7 @@ d3.json('data/killer-data.json', function(error, data) {
 
     var barHeight = 40;
     var height = barHeight * data.length;
-    var mobileThreshold = 700;
+    var mobileThreshold = 800;
 
     var formatNum = d3.format('0,000');
 
@@ -54,7 +54,29 @@ d3.json('data/killer-data.json', function(error, data) {
             return 'translate(0,' + barHeight * i + ')';
         });
 
+    var mobileChart = d3.select('#mobile-killer-chart').append('svg')
+        .attr('height', height);
+
+    var mobileBarDeath = mobileChart.selectAll('g')
+        .data(data)
+        .enter()
+        .append('g')
+        .attr('transform', function(d, i){
+            return 'translate(0,' + barHeight * i + ')';
+        });
+
+    var mobileBarCost = mobileChart.selectAll('g')
+        .data(data)
+        .enter()
+        .append('g')
+        .attr('transform', function(d, i){
+            return 'translate(0,' + barHeight * i + ')';
+        });
+
     function desktopSize() {
+        //blow away initial chart if one exists
+        d3.select('#mobile-chart').empty();
+
         var margin = {top: 0, right: 0, bottom: 0, left: 300},
             width = parseInt(d3.select('#killer-chart').style('width')) - margin.left - margin.right,
             costMargin = {top: 0, right: 0, bottom: 0, left: 65},
@@ -122,26 +144,28 @@ d3.json('data/killer-data.json', function(error, data) {
         d3.select('#killer-cost').empty();
 
         //reset width and xScale
-        var width = parseInt(d3.select('#killer-chart').style('width')),
-            costWidth = parseInt(d3.select('#killer-cost').style('width'));
+        var width = parseInt(d3.select('#mobile-killer-chart').style('width'));
 
         x.range([0, width]);
+        costX.range([0, costWidth]);
 
         /*apply class for mobile sizes, so there 
             are no awkward transitions when resizing*/
-        chart.attr('class', 'mobile')
+        mobileChart.attr('class', 'mobile')
             .attr('width', width);
 
         //redraw chart for mobile, killer-chart
-        bar.append('rect')
+        mobileBarDeath.append('rect')
             .attr('class', 'bar')
+            .attr('class', 'barDeath')
             .attr('width', function(d){
                 return x(d.value);
             })
             .attr('height', barHeight);
 
-        bar.append('text')
+        mobileBarDeath.append('text')
             .attr('class', 'value')
+            .attr('class', 'valueDeath')
             .attr('x', 80)
             .attr('y', barHeight / 2)
             .attr('dy', '.35em')
@@ -149,7 +173,7 @@ d3.json('data/killer-data.json', function(error, data) {
                 return formatNum(d.value);
             });
 
-        bar.append('text')
+        mobileBarDeath.append('text')
             .attr('class', 'name')
             .attr('x', 100)
             .attr('y', barHeight / 2)
@@ -158,23 +182,17 @@ d3.json('data/killer-data.json', function(error, data) {
                 return d.name;
             });
 
-        //redraw chart for mobile, killer-cost
-        costX.range([0, costWidth]);
-
-        /*apply class for mobile sizes, so there 
-            are no awkward transitions when resizing*/
-        costChart.attr('class', 'mobile')
-            .attr('width', costWidth);
-
-        costBar.append('rect')
+        mobileBarCost.append('rect')
             .attr('class', 'bar')
+            .attr('class', 'barCost')
             .attr('width', function(d){
                 return costX(d.cost);
             })
             .attr('height', barHeight);
 
-        costBar.append('text')
+        mobileBarCost.append('text')
             .attr('class', 'value')
+            .attr('class', 'valueCost')
             .attr('x', 80)
             .attr('y', barHeight / 2)
             .attr('dy', '.35em')

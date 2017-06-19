@@ -40,6 +40,7 @@ h1, h2, h3, h4 {
 @media (min-width: 800px) {
     .header {
         margin-left: 35px;
+        border: solid red 1px;
     }
     .hero img {
         height: 150px;
@@ -49,6 +50,9 @@ h1, h2, h3, h4 {
 
 /* Chart
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.chart-wrapper.desktop-chart {
+    display: none;
+}
 .chart-wrapper {
     color: #E5E5E5;
     background-color:#373737;
@@ -56,42 +60,36 @@ h1, h2, h3, h4 {
     margin: 0;
 }
 .chart-container {
-    border: solid red 1px;
+    border: solid blue 1px;
 }
 .chart-container.deaths-chart,
 .chart-container.spending-chart {
     width: 100%;
-    border: solid blue 1px;
-}
-
-.chart-wrapper .chart-header {
-    height: 100px;
-    width: 145px;
-}
-.chart-wrapper .chart-header,
-.chart-wrapper .versus {
-    margin-top: -130px;
-}
-.chart-wrapper .deaths-chart .chart-header {
-    margin-left: 290px;
-}
-.chart-wrapper .spending-chart .chart-header {
-    margin-left: 65px;
-}
-.chart-wrapper .deaths-chart .chart-description {
-    border-bottom: solid 3px #E65B47;
-}
-.chart-wrapper .spending-chart .chart-description {
-    border-bottom: solid 3px #86cbcd;
 }
 .chart-wrapper h2 {
     font-family: 'Ropa Sans', sans-serif; font-size: 3.5rem; line-height: 3rem;  letter-spacing: -.05rem; color: #656565;}
 }
+.chart-wrapper .chart-header.mobile-header p {
+    display: inline;
+    border-radius: 4px;
+    border: solid 1px #525252;
+    padding:5px;
+}
+.chart-wrapper .chart-header {
+    height: 100px;
+    width: 196px;
+}
 /* Larger than phablet (also point when grid becomes active) */
 /*@media (min-width: 550px) {*/
 @media (min-width: 800px) {
+    .chart-wrapper.mobile-chart {
+        display: none;
+    }
+    .chart-container {
+        border: solid green 1px;
+    }
     .chart-wrapper .chart-description {
-        margin: 0 50px 20px 50px;
+        margin: 0 50px 20px 0;
     }
     .chart-wrapper {
         display: flex;
@@ -102,6 +100,25 @@ h1, h2, h3, h4 {
     }
     .chart-container.spending-chart {
         width: 40%;
+    }
+    .chart-header.mobile-header {
+        display: none;
+    }
+    .chart-wrapper .chart-header,
+    .chart-wrapper .versus {
+        margin-top: -130px;
+    }
+    .chart-wrapper .deaths-chart .chart-header {
+        margin-left: 290px;
+    }
+    .chart-wrapper .spending-chart .chart-header {
+        margin-left: 65px;
+    }
+    .chart-wrapper .deaths-chart .chart-description {
+        border-bottom: solid 3px #E65B47;
+    }
+    .chart-wrapper .spending-chart .chart-description {
+        border-bottom: solid 3px #86cbcd;
     }
 }
 #killer-chart, #killer-cost {
@@ -148,7 +165,7 @@ h1, h2, h3, h4 {
     fill: #577273;
 }
 .chart-container.spending-chart .mobile {
-    margin-top:-499px;
+    margin-top:-800px;
 }
 .chart-container .mobile .name {
     text-anchor: start;
