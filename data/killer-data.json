@@ -1,66 +1,77 @@
  [{
-			"name":"Heart Disease",
-			"value":"4850000",
-			"description":"<h4>Diseases of the Heart</h4><p>Deaths : 4,850,000</p><p>ICD-10 Codes : I00–I09,I11,I13,I20–I51 a subsection of Major Cardiovacular Diseases</p><p>The largest cause of cardiovascular disease is atherosclerosis, which is fatty plaque buildup in arteries. Atherosclerosis can be prevented by healthy lifestyle choices, including good diet, exercise, healthy weight, and not smoking.</p><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-12\">12</a>, <a href=\"#ref-14\">14</a>, <a href=\"#ref-15\">15</a>, <a href=\"#ref-16\">16</a>, <a href=\"#ref-19\">19</a>, <a href=\"#ref-20\">20</a>, <a href=\"#ref-21\">21</a>, <a href=\"#ref-26\">26</a>, <a href=\"#ref-27\">27</a></p></div>"
-		}, {
-			"name":"Cancer",
-			"value":"4610000",
-			"description":"<h4>Cancer <span> / Malignant Neoplasms</span></h4><p>Deaths : 4,610,000</p><p>ICD-10 Codes : C00-C97</p><p>Top three cancers are</p><ol><li>Lung and Bronchial</li><li>Colon and rectal</li><li>Breast</li></ol><p>Tobacco use is the greatest risk factor leading to ~ 20% of global cancer deaths.</p><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-6\">6</a>, <a href=\"#ref-14\">14</a>, <a href=\"#ref-15\">15</a>, <a href=\"#ref-16\">16</a>, <a href=\"#ref-19\">19</a>, <a href=\"#ref-20\">20</a>, <a href=\"#ref-21\">21</a>, <a href=\"#ref-26\">26</a>, <a href=\"#ref-27\">27</a></p></div>"
-		}, {
-			"name":"Medical Error",
-			"value":"2010000",
-			"description":"<h4>Medical Error</h4><p>Deaths : 1,010,000</p><p>Medical error has no ICD code and has not been tracked consistently. In the recent years, research has found the number of deaths due to medical error to be <span class=\"highlight\">much higher than earlier estimated</span>. This number was calculated by Makary et al after conducting extensive literature review.</p><p>It includes unintended acts, acts that don't achieve intended outcomes, error of execution of plans, use of the wrong plan to achieve aim, or a deviation from the care process.</p><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-18\">18</a></p></div>"
-		}, {
-			"name":"Chronic Lower Resp Disease",
-			"value":"1130000",
-			"description":"<h4>Chronic Lower Respiratory Disease</h4><p>Deaths : 1,130,000</p><p>ICD-10 Codes : J40-J47</p><p>This includes Chronic Bronchitis, Emphysema, and Asthma all of which entail airway obstruction and shortness of breath.</p><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-7\">7</a>, <a href=\"#ref-14\">14</a>, <a href=\"#ref-15\">15</a>, <a href=\"#ref-16\">16</a>, <a href=\"#ref-19\">19</a>, <a href=\"#ref-20\">20</a>, <a href=\"#ref-21\">21</a>, <a href=\"#ref-26\">26</a>, <a href=\"#ref-27\">27</a></p></div>"
-		}, {
-			"name":"Stroke",
-			"value":"1050000",
-			"description":"<h4>Stroke <span> / Cerebrovascular Disease</span></h4><p>Deaths : 1,050,000</p><p>ICD-10 Codes : I60–I69</p><p>Anyone can have a stroke, but family history, conditions (such as high blood pressure, high cholesterol, heart disease, and others), and behaviours (such as tobaccor use, physical inactivity, unhealthy diet, and others) can add to your risk.</p><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-4\">4</a>, <a href=\"#ref-14\">14</a>, <a href=\"#ref-15\">15</a>, <a href=\"#ref-16\">16</a>, <a href=\"#ref-19\">19</a>, <a href=\"#ref-20\">20</a>, <a href=\"#ref-21\">21</a>, <a href=\"#ref-26\">26</a>, <a href=\"#ref-2\">27</a></p></div>"
-		}, {
-			"name":"Accidents",
-			"value":"1000000",
-			"description":"<h4>Accidents <span> / Unintentional Injuries</span></h4><p>Deaths : 1,000,000</p><p>ICD-10 Codes : V01-X59, Y85-Y86</p><p>Compromised primarily of falls, motor vehicle traffic accidents and unintentional poisoning deaths.</p><img src=\"./images/accidents.png\" class=\"scale-with-grid\" /><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-1\">1</a>, <a href=\"#ref-14\">14</a>, <a href=\"#ref-15\">15</a>, <a href=\"#ref-16\">16</a>, <a href=\"#ref-19\">19</a>, <a href=\"#ref-20\">20</a>, <a href=\"#ref-21\">21</a>, <a href=\"#ref-26\">26</a>, <a href=\"#ref-27\">27</a></p></div>"
-		}, {
-			"name":"Alzheimer's Disease",
-			"value":"670000",
-			"description":""
-		}, {
-			"name":"Diabetes",
-			"value":"580000",
-			"description":""
-		}, {
-			"name":"Influenza, Pneumonia",
-			"value":"430000",
-			"description":""
-		}, {
-			"name":"Kidney Disease",
-			"value":"380000",
-			"description":""
-		}, {
-			"name":"Drug Overdose",
-			"value":"320000",
-			"description":""
-		}, {
-			"name":"Suicide",
-			"value":"310000",
-			"description":""
-		}, {
-			"name":"Firearm Related",
-			"value":"250000",
-			"description":""
-		},  {
-			"name":"Homicide",
-			"value":"110000",
-			"description":""
-		}, {
-			"name":"Drunk Driving",
-			"value":"90000",
-			"description":""
-		}, {
-			"name":"Terrorism",
-			"value":"52",
-			"description":""
-		}
-	]
+		"name":"Heart Disease",
+		"value":"4850000",
+		"cost":"1224",
+		"description":"<h4>Diseases of the Heart</h4><p>Deaths : 4,850,000</p><p>ICD-10 Codes : I00–I09,I11,I13,I20–I51 a subsection of Major Cardiovacular Diseases</p><p>The largest cause of cardiovascular disease is atherosclerosis, which is fatty plaque buildup in arteries. Atherosclerosis can be prevented by healthy lifestyle choices, including good diet, exercise, healthy weight, and not smoking.</p><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-12\">12</a>, <a href=\"#ref-14\">14</a>, <a href=\"#ref-15\">15</a>, <a href=\"#ref-16\">16</a>, <a href=\"#ref-19\">19</a>, <a href=\"#ref-20\">20</a>, <a href=\"#ref-21\">21</a>, <a href=\"#ref-26\">26</a>, <a href=\"#ref-27\">27</a></p></div>"
+	}, {
+		"name":"Cancer",
+		"value":"4610000",
+		"cost":"5392",
+		"description":"<h4>Cancer <span> / Malignant Neoplasms</span></h4><p>Deaths : 4,610,000</p><p>ICD-10 Codes : C00-C97</p><p>Top three cancers are</p><ol><li>Lung and Bronchial</li><li>Colon and rectal</li><li>Breast</li></ol><p>Tobacco use is the greatest risk factor leading to ~ 20% of global cancer deaths.</p><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-6\">6</a>, <a href=\"#ref-14\">14</a>, <a href=\"#ref-15\">15</a>, <a href=\"#ref-16\">16</a>, <a href=\"#ref-19\">19</a>, <a href=\"#ref-20\">20</a>, <a href=\"#ref-21\">21</a>, <a href=\"#ref-26\">26</a>, <a href=\"#ref-27\">27</a></p></div>"
+	}, {
+		"name":"Medical Error",
+		"value":"2010000",
+		"cost":"70",
+		"description":"<h4>Medical Error</h4><p>Deaths : 1,010,000</p><p>Medical error has no ICD code and has not been tracked consistently. In the recent years, research has found the number of deaths due to medical error to be <span class=\"highlight\">much higher than earlier estimated</span>. This number was calculated by Makary et al after conducting extensive literature review.</p><p>It includes unintended acts, acts that don't achieve intended outcomes, error of execution of plans, use of the wrong plan to achieve aim, or a deviation from the care process.</p><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-18\">18</a></p></div>"
+	}, {
+		"name":"Chronic Lower Resp Disease",
+		"value":"1130000",
+		"cost":"134",
+		"description":"<h4>Chronic Lower Respiratory Disease</h4><p>Deaths : 1,130,000</p><p>ICD-10 Codes : J40-J47</p><p>This includes Chronic Bronchitis, Emphysema, and Asthma all of which entail airway obstruction and shortness of breath.</p><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-7\">7</a>, <a href=\"#ref-14\">14</a>, <a href=\"#ref-15\">15</a>, <a href=\"#ref-16\">16</a>, <a href=\"#ref-19\">19</a>, <a href=\"#ref-20\">20</a>, <a href=\"#ref-21\">21</a>, <a href=\"#ref-26\">26</a>, <a href=\"#ref-27\">27</a></p></div>"
+	}, {
+		"name":"Stroke",
+		"value":"1050000",
+		"cost":"300",
+		"description":"<h4>Stroke <span> / Cerebrovascular Disease</span></h4><p>Deaths : 1,050,000</p><p>ICD-10 Codes : I60–I69</p><p>Anyone can have a stroke, but family history, conditions (such as high blood pressure, high cholesterol, heart disease, and others), and behaviours (such as tobaccor use, physical inactivity, unhealthy diet, and others) can add to your risk.</p><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-4\">4</a>, <a href=\"#ref-14\">14</a>, <a href=\"#ref-15\">15</a>, <a href=\"#ref-16\">16</a>, <a href=\"#ref-19\">19</a>, <a href=\"#ref-20\">20</a>, <a href=\"#ref-21\">21</a>, <a href=\"#ref-26\">26</a>, <a href=\"#ref-2\">27</a></p></div>"
+	}, {
+		"name":"Accidents",
+		"value":"1000000",
+		"cost":"404",
+		"description":"<h4>Accidents <span> / Unintentional Injuries</span></h4><p>Deaths : 1,000,000</p><p>ICD-10 Codes : V01-X59, Y85-Y86</p><p>Compromised primarily of falls, motor vehicle traffic accidents and unintentional poisoning deaths.</p><img src=\"./images/accidents.png\" class=\"scale-with-grid\" /><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-1\">1</a>, <a href=\"#ref-14\">14</a>, <a href=\"#ref-15\">15</a>, <a href=\"#ref-16\">16</a>, <a href=\"#ref-19\">19</a>, <a href=\"#ref-20\">20</a>, <a href=\"#ref-21\">21</a>, <a href=\"#ref-26\">26</a>, <a href=\"#ref-27\">27</a></p></div>"
+	}, {
+		"name":"Alzheimer's Disease",
+		"value":"670000",
+		"cost":"562",
+		"description":"<h4>Alzheimer's Disease</h4><p>Deaths : 670,000</p><p>ICD-10 Code : G30</p><p>Ad is the most prevalent form of dementia. AD can be hereditary, but age is the primary risk factor.</p><p>Researchers still have not pinpointed what causes the disease.</p><p>As our population ages, <span class=\"highlight\">the number of deaths per year is expected to nearly triple.</span></p><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-2\">2</a>, <a href=\"#ref-14\">14</a>, <a href=\"#ref-15\">15</a>, <a href=\"#ref-16\">16</a>, <a href=\"#ref-19\">19</a>, <a href=\"#ref-20\">20</a>, <a href=\"#ref-21\">21</a>, <a href=\"#ref-26\">26</a>, <a href=\"#ref-27\">27</a></p></div>"
+	}, {
+		"name":"Diabetes",
+		"value":"580000",
+		"cost":"1011",
+		"description":"<h4>Diabetes Mellitus</h4><p>Deaths : 580,000</p><p>ICD-10 Code : E10-E14</p><p>Because Diabetes is underdiagnosed and may be underreported in death certificates, <span class=\"highlight\">this number is most likely an underestimate.</span></p><div class=\"citations\"><h4>Citations</h4><p><a href=\"#ref-14\">14</a>, <a href=\"#ref-15\">15</a>, <a href=\"#ref-16\">16</a>, <a href=\"#ref-19\">19</a>, <a href=\"#ref-20\">20</a>, <a href=\"#ref-21\">21</a>, <a href=\"#ref-24\">24</a>, <a href=\"#ref-26\">26</a>, <a href=\"#ref-27\">27</a></p></div>"
+	}, {
+		"name":"Influenza, Pneumonia",
+		"value":"430000",
+		"cost":"362",
+		"description":""
+	}, {
+		"name":"Kidney Disease",
+		"value":"380000",
+		"cost":"549",
+		"description":""
+	}, {
+		"name":"Suicide",
+		"value":"310000",
+		"cost":"39",
+		"description":""
+	}, {
+		"name":"Firearm Related",
+		"value":"250000",
+		"cost":"0",
+		"description":""
+	},  {
+		"name":"Homicide",
+		"value":"110000",
+		"cost":"0",
+		"description":""
+	}, {
+		"name":"Drunk Driving",
+		"value":"90000",
+		"cost":"148",
+		"description":""
+	}, {
+		"name":"Terrorism",
+		"value":"52",
+		"cost":"16000",
+		"description":""
+	}
+]

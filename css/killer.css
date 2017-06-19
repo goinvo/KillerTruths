@@ -1,3 +1,16 @@
+/*
+grey-text: #ccc;
+killer-chart name active: #fcbea2;
+killer-chart name inactive: #987a6d;
+bar active: #fff;
+bar inactive: #9b9b9b;
+cost-text active: #8acecf;
+cost-text inactive: #6c9797;
+killer-chart value active: #e45c4c;
+killer-chart value inactive: #8e4a41;
+*/
+
+
 body {
     color: #353535;
     background-color:#373737;
@@ -24,9 +37,9 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 800px) {
     .header {
-        margin-left: 50px;
+        margin-left: 35px;
     }
     .hero img {
         height: 150px;
@@ -39,19 +52,59 @@ h1, h2, h3, h4 {
 .chart-wrapper {
     color: #E5E5E5;
     background-color:#373737;
+    display: block;
+    margin: 0;
 }
-.chart-wrapper .chart-description {
-    max-width: 500px;
-    margin-left: 32px;
-    margin-right: 20px;
+.chart-container {
+    border: solid red 1px;
+}
+.chart-container.deaths-chart,
+.chart-container.spending-chart {
+    width: 100%;
+    border: solid blue 1px;
+}
+
+.chart-wrapper .chart-header {
+    height: 100px;
+    width: 145px;
+}
+.chart-wrapper .chart-header,
+.chart-wrapper .versus {
+    margin-top: -130px;
+}
+.chart-wrapper .deaths-chart .chart-header {
+    margin-left: 290px;
+}
+.chart-wrapper .spending-chart .chart-header {
+    margin-left: 65px;
+}
+.chart-wrapper .deaths-chart .chart-description {
+    border-bottom: solid 3px #E65B47;
+}
+.chart-wrapper .spending-chart .chart-description {
+    border-bottom: solid 3px #86cbcd;
+}
+.chart-wrapper h2 {
+    font-family: 'Ropa Sans', sans-serif; font-size: 3.5rem; line-height: 3rem;  letter-spacing: -.05rem; color: #656565;}
 }
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
+/*@media (min-width: 550px) {*/
+@media (min-width: 800px) {
     .chart-wrapper .chart-description {
         margin: 0 50px 20px 50px;
     }
+    .chart-wrapper {
+        display: flex;
+        margin: 0 30px;
+    }
+    .chart-container.deaths-chart {
+        width: 60%;
+    }
+    .chart-container.spending-chart {
+        width: 40%;
+    }
 }
-#killer-chart {
+#killer-chart, #killer-cost {
     width:100%;
 }
 #killer-chart .killer {
@@ -59,39 +112,45 @@ h1, h2, h3, h4 {
     height: 100px;
     width: 100px;
 }
-#killer-chart .label {
+.chart-container .label {
     z-index: 1;
     margin-left: 1rem;
 }
-#killer-chart .label .value,
-#killer-chart .label .name {
+.chart-container .label .value,
+.chart-container .label .name {
     display: inline-block;
 }
-#killer-chart .bar {
+.chart-container .bar {
     fill: #fff;
     height: 10px;
 }
-#killer-chart .name {
+.chart-container .name {
     fill: #FBBD9F;
     text-transform: uppercase;
     font-family: 'Ropa Sans', sans-serif;
     text-anchor: end;
 }
-#killer-chart .value {
-    fill: #E65B47;
+.chart-container .value {
     font-family: 'Ropa Sans', sans-serif;
+    text-anchor: end;
 }
-
-#killer-chart .mobile .bar {
+.chart-container.deaths-chart .value {
+    fill: #E65B47;
+}
+.chart-container.spending-chart .value {
+    fill: #8acecf;
+}
+.chart-container .mobile .bar {
     fill: #000;
     height: 40px;
 }
-#killer-chart .value {
-    fill: #E65B47;
-    text-anchor: end;
+.chart-container.spending-chart .mobile .bar {
+    fill: #577273;
 }
-#killer-chart .mobile .name {
-    fill: #FBBD9F;
+.chart-container.spending-chart .mobile {
+    margin-top:-499px;
+}
+.chart-container .mobile .name {
     text-anchor: start;
 }
 .description {
@@ -146,10 +205,16 @@ h1, h2, h3, h4 {
 /* Downloads
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .download-wrapper {
-    background-color: #000;
+    position: relative;
+    margin-bottom: 90px;
+    width: 100%;
+}
+.download-wrapper .container{
+    background-color: #4b4b4b;
+    padding: 15px;
 }
 .download-wrapper a {
-    color: #E65B47;
+    color: #ccc;
 }
 .download-wrapper ul {
     list-style: none;
@@ -172,13 +237,13 @@ h1, h2, h3, h4 {
 }
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
-    .dl-img {
-        margin-bottom: 10px;
-    }
-    .dl-img svg{
-        height: 50px;
-        width: 50px;
+@media (min-width: 800px) {
+    .download-wrapper .container {
+        position: absolute;
+        right: 0;
+        height: 90px;
+        width: 500px;
+        border-radius: 45px 0px 0px 45px;
     }
 }
 
